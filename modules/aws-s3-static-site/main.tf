@@ -52,7 +52,7 @@ resource "aws_cloudfront_origin_access_identity" "CDN" {
   comment = "Access identity for S3 bucket origin"
 }
 resource "aws_cloudfront_origin_access_control" "default" {
-  name                              = "example"
+  name                              = var.site_url
   description                       = "Example Policy"
   origin_access_control_origin_type = "s3"
   signing_behavior                  = "always"
