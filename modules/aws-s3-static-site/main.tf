@@ -48,7 +48,7 @@ data "aws_iam_policy_document" "bucket_read_access" {
 
 ##################################
 
-resource "aws_cloudfront_origin_access_identity" "default" {
+resource "aws_cloudfront_origin_access_identity" "CDN" {
   comment = "Access identity for S3 bucket origin"
 }
 resource "aws_cloudfront_origin_access_control" "default" {
@@ -70,9 +70,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
   enabled             = true
   default_root_object = "index.html"
-
-
-  aliases = [var.site_url]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
