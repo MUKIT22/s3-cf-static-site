@@ -1,0 +1,44 @@
+# Terraform .terraform directory
+.terraform/
+
+# Compiled files
+*.tfstate
+*.tfstate.backup
+*.tfplan
+
+# Local .tfvars files
+*.auto.tfvars
+*.tfvars
+
+# Log files
+*.log
+
+# Exclude .env file if you store secrets
+.env
+
+# Exclude .vscode directory if you use Visual Studio Code
+.vscode/
+
+# Exclude .idea directory if you use IntelliJ IDEA
+.idea/
+
+# macOS .DS_Store files
+.DS_Store
+
+# Editor backup files
+*~
+
+# Excluded when using the common directory structure for modules
+# See https://www.terraform.io/docs/modules/index.html
+_common/
+
+# Exclude .terraform.lock.hcl (Terraform 0.13+)
+.terraform.lock.hcl
+
+# Local override files for providers
+override.tf
+
+# Override files (Terraform Cloud/Enterprise)
+override.tf.json
+*_override.tf
+*_override.tf.json

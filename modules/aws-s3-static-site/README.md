@@ -1,0 +1,1 @@
+Hosting a static site on aws using s3 and cloudfront
