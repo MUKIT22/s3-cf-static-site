@@ -7,8 +7,6 @@
 *.tfplan
 
 # Local .tfvars files
-*.auto.tfvars
-*.tfvars
 
 # Log files
 *.log

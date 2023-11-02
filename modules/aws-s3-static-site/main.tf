@@ -41,7 +41,7 @@ data "aws_iam_policy_document" "bucket_read_access" {
     resources = [
       "${aws_s3_bucket.s3_bucket.arn}/*",
     ]
-    effect    = "Allow"
+    effect = "Allow"
   }
 }
 
@@ -98,6 +98,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true    
+    cloudfront_default_certificate = true
   }
 }
